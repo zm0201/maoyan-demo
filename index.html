@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>猫眼</title>
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <script src="./js/iconfont-inject.js"></script>
+  </head>
+
+  <body>
+    <div class="pop-nav">
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">榜单</a></li>
+        <li><a href="#">热点</a></li>
+        <li><a href="#">商场</a></li>
+      </ul>
+    </div>
+
+    <!-- 头部 -->
+    <header class="header">
+      <div class="navbar">
+        <h4 class="title">猫眼电影</h4>
+        <span
+          class="iconfont icon-xuanxiangqiacaidananniu"
+          id="header-menu-btn"
+        ></span>
+      </div>
+    </header>
+
+    <!-- 主体 -->
+    <main class="main">
+      <iframe
+        name="pages-wrapper"
+        class="pages-wrapper"
+        src="./pages/movie-cinema.html"
+        frameborder="0"
+      ></iframe>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <ul id="bottom-nav-wrapper">
+        <li class="nav">
+          <a href="./pages/movie-cinema.html" target="pages-wrapper">
+            <div class="nav_item current">
+              <span class="iconfont icon-dianying"></span>
+              <p>电影/影院</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="./pages/videos.html" target="pages-wrapper">
+            <div class="nav_item">
+              <span class="iconfont icon-shipin"></span>
+              <p>视频</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="./pages/small-videos.html" target="pages-wrapper">
+            <div class="nav_item">
+              <span class="iconfont icon-shipin2x"></span>
+              <p>小视频</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="./pages/perform.html" target="pages-wrapper">
+            <div class="nav_item">
+              <span class="iconfont icon-yanchu-xianxing2-0"></span>
+              <p>演出</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav">
+          <a href="./pages/personal.html" target="pages-wrapper">
+            <div class="nav_item">
+              <span class="iconfont icon-31wode"></span>
+              <p>我的</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+
+  <script src="./js/index.js" type="module"></script>
+</html>

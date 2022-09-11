@@ -1,0 +1,87 @@
+@import './base.less';
+@import './common.less';
+
+// 主体经典电影列表部分
+.movie-list-container {
+  background-color: #fff;
+
+  .movie-list {
+    .movie-list-item {
+      height: 114px;
+      background-color: white;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+
+      .movie-list-item-img {
+        width: 64px;
+        height: 88px;
+      }
+
+      .movie-content-box {
+        border-bottom: #ededed solid 1px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        width: 100%;
+        height: 114px;
+
+        .movie-content {
+          width: 100%;
+          height: 88px;
+          background-color: #fff;
+          padding-right: 15px;
+          display: flex;
+          flex-direction: column;
+
+          .movie-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+
+            .movie-title-name {
+              font-size: 17px;
+              color: #333;
+              font-weight: bolder;
+            }
+
+            .score-box {
+              display: flex;
+              .score {
+                font-size: 15px;
+                color: #faaf00;
+                margin-left: 5px;
+              }
+
+              .score-desc {
+                font-size: 12px;
+                color: #999;
+                padding-top: 3px;
+              }
+            }
+          }
+
+          .E-name {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 4px;
+          }
+        }
+
+        .cinema-style {
+          font-size: 13px;
+          color: #666;
+          margin-bottom: 4px;
+        }
+
+        .show-msg {
+          display: flex;
+          font-size: 13px;
+          color: #666;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}

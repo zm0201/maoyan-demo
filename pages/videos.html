@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>视频</title>
+
+    <link rel="stylesheet" href="../css/videos.css" />
+  </head>
+  <body>
+    <!-- 头部header栏 -->
+    <header class="header">
+      <div class="tabs-container">
+        <div class="tabs">
+          <ul onclick="handleTabsClick(event)">
+            <li class="current">
+              <a href="#"> 推荐 </a>
+            </li>
+            <li>
+              <a href="#"> 热片解读 </a>
+            </li>
+            <li>
+              <a
+                href="./movie-cinema/waiting-screening.html"
+                target="movie-cinema-nav"
+              >
+                新片预告
+              </a>
+            </li>
+            <li>
+              <a
+                href="./movie-cinema/classic-movie.html"
+                target="movie-cinema-nav"
+              >
+                速看电影
+              </a>
+            </li>
+            <li>
+              <a href="./movie-cinema/cinema.html" target="movie-cinema-nav">
+                剧集综艺
+              </a>
+            </li>
+            <li>
+              <a href="./movie-cinema/cinema.html" target="movie-cinema-nav">
+                体育世界
+              </a>
+            </li>
+            <li>
+              <a href="./movie-cinema/cinema.html" target="movie-cinema-nav">
+                搞笑视频
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 激活tab下方滑块 -->
+        <div class="tab-active-block"></div>
+        <!-- 右侧搜索按钮 -->
+      </div>
+    </header>
+  </body>
+
+  <script src="../js/video.js" type="module"></script>
+</html>

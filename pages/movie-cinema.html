@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电影/影院</title>
+
+    <link rel="stylesheet" href="../../css/movie-cinema.css" />
+    <script src="../../js/iconfont-inject.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- 头部tab栏 -->
+      <div class="tabs-container">
+        <div class="location-box">
+          <p class="location">北京</p>
+          <p class="unfold iconfont icon-zhankai"></p>
+        </div>
+        <div class="left">
+          <ul class="tab-items" id="tab-items">
+            <li class="current">
+              <a
+                href="./movie-cinema/hot-screening.html"
+                target="movie-cinema-nav"
+              >
+                热映
+              </a>
+            </li>
+            <li>
+              <a href="./movie-cinema/cinema.html" target="movie-cinema-nav">
+                影院
+              </a>
+            </li>
+            <li>
+              <a
+                href="./movie-cinema/waiting-screening.html"
+                target="movie-cinema-nav"
+              >
+                待映
+              </a>
+            </li>
+            <li>
+              <a
+                href="./movie-cinema/classic-movie.html"
+                target="movie-cinema-nav"
+              >
+                经典电影
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 激活tab下方滑块 -->
+        <div class="tab-active-block"></div>
+        <!-- 右侧搜索按钮 -->
+        <div class="right">
+          <a href="../search.html" target="_parent">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <main class="main">
+      <iframe
+        name="movie-cinema-nav"
+        class="movie-cinema-nav"
+        src="./movie-cinema/hot-screening.html"
+        frameborder="0"
+      ></iframe>
+    </main>
+  </body>
+
+  <script src="../js/movie-cinema.js" type="module"></script>
+</html>

@@ -1,0 +1,101 @@
+@import './base.less';
+@import './common.less';
+
+body {
+  height: 100vh;
+}
+
+.header {
+  height: 46px;
+
+  // 头部tab栏
+  .tabs-container {
+    height: 44px;
+    padding-left: 15px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .location-box {
+      width: 62px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .location {
+        font-size: 15px;
+        color: #666;
+      }
+
+      .iconfont {
+        color: #b0b0b0;
+      }
+    }
+
+    .left {
+      width: 240px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          height: 41px;
+
+          &.current {
+            a {
+              font-size: 18px;
+              font-weight: 600;
+              color: black;
+            }
+          }
+
+          a {
+            display: block;
+            color: #666;
+            height: 41px;
+            line-height: 41px;
+          }
+        }
+      }
+    }
+
+    // 激活tab下方滑块样式
+    .tab-active-block {
+      width: 20px;
+      height: 2px;
+      background-color: @primary_color;
+      position: absolute;
+      left: 91px;
+      bottom: 4px;
+      border-radius: 999px;
+      transition: transform 300ms;
+    }
+
+    //右侧搜索按钮
+    .right {
+      span {
+        font-size: 22px;
+        color: @primary_color;
+        font-weight: 600;
+        display: block;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//主体部分
+.main {
+  height: calc(100vh - 46px);
+
+  .movie-cinema-nav {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+}

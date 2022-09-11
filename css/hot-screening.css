@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+body {
+  background-color: #ededed;
+}
+.red {
+  background-color: #d4544e;
+  border: #d4544e 0.26666666666666666vw solid;
+}
+.blue {
+  background-color: #3c9fe6;
+  border: #3c9fe6 0.26666666666666666vw solid;
+}
+.Top-rated-movies-container {
+  height: 54.93333333333334vw;
+  background-color: #fff;
+  padding: 3.2vw 4vw;
+  margin-bottom: 2.666666666666667vw;
+}
+.Top-rated-movies-container .title {
+  font-size: 3.733333333333334vw;
+  color: #333;
+  margin-bottom: 3.2vw;
+}
+.Top-rated-movies-container .Top-rated-movies-box {
+  height: 39.2vw;
+  overflow: hidden;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies {
+  height: 41.86666666666667vw;
+  display: flex;
+  overflow-x: auto;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies .Top-rated-movies-item {
+  width: 22.666666666666664vw;
+  height: 38.13333333333333vw;
+  margin-right: 2.666666666666667vw;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies .Top-rated-movies-item .Top-rated-movies-img {
+  height: 30.666666666666664vw;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies .Top-rated-movies-item .score {
+  width: 100%;
+  height: 8vw;
+  padding: 0 1.3333333333333335vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 7.466666666666668vw;
+  z-index: 3;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies .Top-rated-movies-item .score span {
+  font-size: 3.2vw;
+  color: #faaf00;
+  font-weight: bolder;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies .Top-rated-movies-item .score-bgc {
+  width: 100%;
+  height: 9.333333333333334vw;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  position: absolute;
+  left: 0;
+  bottom: 7.466666666666668vw;
+  z-index: 1;
+}
+.Top-rated-movies-container .Top-rated-movies-box .Top-rated-movies .Top-rated-movies-item .movie-name {
+  width: 22.666666666666664vw;
+  height: 5.066666666666666vw;
+  font-size: 3.4666666666666663vw;
+  color: #222;
+  margin-bottom: 0.8vw;
+  font-weight: bold;
+}
+.movie-list-container {
+  background-color: #fff;
+}
+.movie-list-container .movie-list .movie-list-item {
+  width: 100%;
+  height: 30.4vw;
+  background-color: white;
+  padding-left: 4vw;
+  display: flex;
+  align-items: center;
+}
+.movie-list-container .movie-list .movie-list-item .movie-list-item-img {
+  width: 17.066666666666666vw;
+  height: 23.466666666666665vw;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box {
+  width: 58.666666666666664vw;
+  border-bottom: #ededed solid 0.26666666666666666vw;
+  display: flex;
+  align-items: center;
+  margin-left: 2.666666666666667vw;
+  width: 100%;
+  height: 30.4vw;
+  position: relative;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content {
+  width: 58.666666666666664vw;
+  height: 23.466666666666665vw;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .movie-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.3333333333333335vw;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .movie-title .movie-title-name {
+  font-size: 4.533333333333333vw;
+  color: #333;
+  font-weight: bolder;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .movie-title .style {
+  width: 11.466666666666667vw;
+  height: 3.733333333333334vw;
+  margin-left: 1.3333333333333335vw;
+  background-image: url(../image/v2dimax.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .score-box {
+  display: flex;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .score-box .desc {
+  font-size: 3.4666666666666663vw;
+  color: #666;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .score-box .score {
+  font-size: 4vw;
+  color: #faaf00;
+  margin-left: 1.3333333333333335vw;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .capital-role-box {
+  width: 100%;
+  display: flex;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .capital-role-box .capital-role-desc {
+  width: 8vw;
+  font-size: 3.4666666666666663vw;
+  color: #666;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .capital-role-box .capital-role {
+  width: 50.66666666666667vw;
+  font-size: 3.4666666666666663vw;
+  color: #666;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .movie-number-box {
+  display: flex;
+}
+.movie-list-container .movie-list .movie-list-item .movie-content-box .movie-content .movie-number-box p {
+  font-size: 3.4666666666666663vw;
+  color: #666;
+}
+.movie-list-container .movie-list .button-to-buy {
+  width: 14.399999999999999vw;
+  height: 7.466666666666668vw;
+  color: #fff;
+  border: 0.26666666666666666vw solid;
+  border-radius: 3.733333333333334vw;
+  position: absolute;
+  right: 4vw;
+  top: 11.466666666666667vw;
+  z-index: 2;
+}
