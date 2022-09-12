@@ -4,20 +4,21 @@ const docNodes = {
 };
 
 if (docNodes.cinemaDOM) {
-  getJson('/cinemas', { ci: 20, ct: '北京' }).then(res => {
-    const cinima = data?.data;
-    docNodes.cinemaDOM.innerHTML += `
+  getJson('/cinemas', { cityId: 1, cityName: '北京' }).then(res => {
+    const cinema = res?.data?.cinemas?.cinemas;
+    cinema.forEach(element => {
+      docNodes.cinemaDOM.innerHTML += `
        <div class="cinema-box" id="cinema-box">
         <div class="title">
-          <div class="cinema-name">东融国际影城（马家堡店）</div>
+          <div class="cinema-name">${element.nm}</div>
           <span class="price"
-            >23
+            >${element.sellPrice}
             <p>元起</p></span
           >
         </div>
 
         <div class="location">
-          <p>丰台区角门路19号院新荟城购物中心4楼</p>
+          <p class="ellipsis">${element.addr}</p>
           <p>300m</p>
         </div>
 
@@ -35,5 +36,6 @@ if (docNodes.cinemaDOM) {
         </div>
       </div>
       `;
+    });
   });
 }

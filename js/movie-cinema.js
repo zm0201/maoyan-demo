@@ -1,5 +1,6 @@
 const docNodes = {
   headerNav: document.getElementById('tab-items'),
+  cityName: document.getElementById('city-name'),
 };
 
 const events = {
@@ -48,7 +49,16 @@ const events = {
 
 (function () {
   registerEvents();
+  const { 1: cityName } = parseQuery();
+  docNodes.cityName.textContent = cityName || '北京';
 })();
+
+function parseQuery() {
+  const query = new URLSearchParams(parent.location.search);
+  const cityId = query.get('ci');
+  const cityName = query.get('nm');
+  return [cityId, cityName];
+}
 
 function registerEvents() {
   window.addEventListener('load', function () {

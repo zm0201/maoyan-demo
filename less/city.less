@@ -1,0 +1,51 @@
+@import './base.less';
+@import './common.less';
+
+body {
+  background-color: #f5f5f5;
+
+  .main {
+    .city-box {
+      .group-box {
+        .label {
+          height: 30px;
+          background-color: #ebebeb;
+          padding-left: 25px;
+          font-size: 14px;
+          color: #333;
+          line-height: 30px;
+        }
+
+        .cities {
+          .city-item {
+            width: 330px;
+            height: 45px;
+            margin-left: 15px;
+            border-bottom: #c8c7cc 1px solid;
+            line-height: 45px;
+            color: #333;
+            font-size: 14px;
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+
+    .aside-bar {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #333;
+      font-size: 12px;
+      width: 25px;
+
+      .nav-item {
+        text-align: center;
+      }
+    }
+  }
+}

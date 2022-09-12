@@ -22,7 +22,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .clearfix::before,
@@ -35,6 +35,14 @@ img {
 }
 body {
   background-color: #ededed;
+}
+.red {
+  background-color: #d4544e;
+  border: #d4544e 0.26666666666666666vw solid;
+}
+.blue {
+  background-color: #3c9fe6;
+  border: #3c9fe6 0.26666666666666666vw solid;
 }
 body {
   height: 100vh;
@@ -51,17 +59,24 @@ body {
   align-items: center;
   position: relative;
 }
-.header .tabs-container .location-box {
+.header .tabs-container .city {
+  display: block;
   width: 16.53333333333333vw;
+  height: 11.733333333333333vw;
+  text-align: center;
+}
+.header .tabs-container .city .location-box {
+  width: 16.53333333333333vw;
+  height: 11.733333333333333vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .tabs-container .location-box .location {
+.header .tabs-container .city .location-box .location {
   font-size: 4vw;
   color: #666;
 }
-.header .tabs-container .location-box .iconfont {
+.header .tabs-container .city .location-box .iconfont {
   color: #b0b0b0;
 }
 .header .tabs-container .left {

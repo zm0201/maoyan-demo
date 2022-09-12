@@ -1,10 +1,19 @@
 import { getJson } from '../api/http/index.js';
 
 (function () {
-  fetchHotMovies();
+  // const cityId = parseQuery()[0];
+  const [cityId, cityName] = parseQuery();
+  fetchHotMovies(cityId, cityName);
 })();
 
-function fetchHotMovies() {
+function parseQuery() {
+  const query = new URLSearchParams(parent.parent.location.search);
+  const cityId = query.get('ci');
+  const cityName = query.get('nm');
+  return [cityId, cityName];
+}
+
+function fetchHotMovies(cityId, cityName) {
   const renderMarkOrWantWatch = element => {
     if (element.showStateButton.content === '预售') {
       return `<div class="wish-box">
@@ -19,34 +28,54 @@ function fetchHotMovies() {
     }
   };
 
-  getJson('/movie/hot', { ci: 1, ct: '北京' }).then(res => {
-    const topMoviesDOM = document.querySelector('.Top-rated-movies');
-    if (topMoviesDOM) {
-      const hots = res?.data?.data?.hot || [];
-      hots.forEach(item => {
-        topMoviesDOM.innerHTML += `
-          <div class="Top-rated-movies-item">
-            <img
-              src="${item.img}"
-              alt=""
-              class="Top-rated-movies-img"
-            />
-            <div class="score">
-              <span>观众评分</span>
-              <span>${item.mk.toFixed(1)}</span>
-            </div>
-            <div class="score-bgc">
-            </div>
-            <p class="movie-name ellipsis">${item.nm}</p>
-          </div>
-        `;
-      });
-    }
+  getJson('/movie/hot', { ci: cityId || 1, ct: cityName || '北京' }).then(
+    res => {
+      const topMoviesDOM = document.querySelector('.Top-rated-movies');
+      if (topMoviesDOM) {
+        const hots = res?.data?.data?.hot || [];
+        hots.sort((hotA, hotB) => {
+          return hotA.mk - hotB.mk;
+        });
+        hots.reverse();
+        hots.forEach(item => {
+          const movieItem = document.createElement('div');
+          movieItem.className = 'Top-rated-movies-item';
 
-    const hotListDom = document.querySelector('.movie-list');
-    const listItems = res?.data?.data?.hot || [];
-    listItems.forEach(element => {
-      hotListDom.innerHTML += `<li class="movie-list-item">
+          const img = document.createElement('img');
+          img.src = item.img;
+          img.className = 'Top-rated-movies-img';
+
+          movieItem.appendChild(img);
+
+          const score = document.createElement('div');
+          score.className = 'score';
+
+          const text = document.createElement('span');
+          text.textContent = '观众评分';
+
+          const scoreValue = document.createElement('span');
+          scoreValue.textContent = item.mk.toFixed(1);
+
+          score.append(text, scoreValue);
+          movieItem.appendChild(score);
+
+          const scoreBgc = document.createElement('div');
+          scoreBgc.className = 'score-bgc';
+
+          const movieName = document.createElement('p');
+          movieName.className = 'movie-name ellipsis';
+          movieName.textContent = item.nm;
+
+          movieItem.append(scoreBgc, movieName);
+
+          topMoviesDOM.appendChild(movieItem);
+        });
+      }
+
+      const hotListDom = document.querySelector('.movie-list');
+      const listItems = res?.data?.data?.hot || [];
+      listItems.forEach(element => {
+        hotListDom.innerHTML += `<li class="movie-list-item">
             <img
               src="${element.img}"
               alt="movie"
@@ -80,6 +109,7 @@ function fetchHotMovies() {
               </button>
              </div>
           </li>`;
-    });
-  });
+      });
+    }
+  );
 }
