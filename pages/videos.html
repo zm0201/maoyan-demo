@@ -13,7 +13,7 @@
     <header class="header">
       <div class="tabs-container">
         <div class="tabs">
-          <ul onclick="handleTabsClick(event)">
+          <ul class="tab-list" id="tab-list">
             <li class="current">
               <a href="#"> 推荐 </a>
             </li>
@@ -21,12 +21,7 @@
               <a href="#"> 热片解读 </a>
             </li>
             <li>
-              <a
-                href="./movie-cinema/waiting-screening.html"
-                target="movie-cinema-nav"
-              >
-                新片预告
-              </a>
+              <a href="#" target="movie-cinema-nav"> 新片预告 </a>
             </li>
             <li>
               <a
@@ -58,6 +53,16 @@
         <!-- 右侧搜索按钮 -->
       </div>
     </header>
+
+    <!-- 主体内容 -->
+    <main class="main">
+      <iframe
+        name="movie-cinema-nav"
+        class="movie-cinema-nav"
+        src="./movie-cinema/hot-screening.html"
+        frameborder="0"
+      ></iframe>
+    </main>
   </body>
 
   <script src="../js/video.js" type="module"></script>

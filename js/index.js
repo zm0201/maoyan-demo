@@ -4,6 +4,7 @@ const docNodes = {
 };
 
 const events = {
+  //头部菜单按钮点击事件
   handleHeaderMenuClick() {
     const popNav = document.querySelector('body > .pop-nav');
     if (!popNav) {
@@ -11,10 +12,13 @@ const events = {
     }
     popNav.style.display = 'block';
   },
-  //底部nav 栏,current 切换
+
+  //底部nav 栏点击事件,current 切换
   handleNavClick(event) {
     //获取被点击的对象
+    console.log(event.target);
     let node = event.target.children[0];
+    console.log(node);
     //取消上一个current
     const lastCurrent = document.querySelector(
       '.footer > ul > li > a > .nav_item.current'
@@ -23,8 +27,11 @@ const events = {
       return;
     }
     lastCurrent.classList.remove('current');
+    //被点击对象添加 current 类
     node.classList.add('current');
   },
+
+  // 头部弹出菜单隐藏事件
   handleHideMenu(event) {
     const popNav = document.querySelector('body > .pop-nav');
     if (!popNav) {

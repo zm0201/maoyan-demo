@@ -22,7 +22,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .clearfix::before,
@@ -35,6 +35,14 @@ img {
 }
 body {
   background-color: #ededed;
+}
+.red {
+  background-color: #d4544e;
+  border: #d4544e 0.26666666666666666vw solid;
+}
+.blue {
+  background-color: #3c9fe6;
+  border: #3c9fe6 0.26666666666666666vw solid;
 }
 .header {
   height: 12.266666666666666vw;
@@ -88,4 +96,15 @@ body {
   bottom: 1.0666666666666667vw;
   border-radius: 266.40000000000003vw;
   transition: transform 300ms;
+}
+.main {
+  width: 100%;
+  height: calc(100vh-11.733333333333333vw);
+}
+.main .movie-cinema-nav {
+  width: 100%;
+  height: 100%;
+}
+.main .movie-cinema-nav html {
+  height: 100%;
 }

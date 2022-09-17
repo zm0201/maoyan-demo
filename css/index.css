@@ -22,7 +22,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .clearfix::before,
@@ -35,6 +35,14 @@ img {
 }
 body {
   background-color: #ededed;
+}
+.red {
+  background-color: #d4544e;
+  border: #d4544e 0.26666666666666666vw solid;
+}
+.blue {
+  background-color: #3c9fe6;
+  border: #3c9fe6 0.26666666666666666vw solid;
 }
 body .pop-nav {
   width: 26.666666666666668vw;

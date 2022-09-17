@@ -48,12 +48,13 @@ body {
   height: 100vh;
 }
 .header {
-  height: 12.266666666666666vw;
+  height: 11.733333333333333vw;
+  background-color: #fff;
+  margin-bottom: 0.5333333333333333vw;
 }
 .header .tabs-container {
   height: 11.733333333333333vw;
-  padding-left: 4vw;
-  background-color: #fff;
+  margin-left: 4vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,7 +107,7 @@ body {
   height: 0.5333333333333333vw;
   background-color: #d4544e;
   position: absolute;
-  left: 24.266666666666666vw;
+  transform: translateX(20.533333333333335vw);
   bottom: 1.0666666666666667vw;
   border-radius: 266.40000000000003vw;
   transition: transform 300ms;
